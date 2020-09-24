@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <div>首页</div>
     <div id="potBottom">
       <div v-for="(item,index) in potBottom" :key="index">
         <p>{{item.type}}</p>
@@ -56,6 +55,7 @@ export default {
       cardList: [], // 牌堆
       potBottom: [], //锅底
       gameStatus: 0, // 游戏状态  0 开始   1 叫分   2 出牌  3 结账
+      record: [1, 2, 3], // 可叫分数列表
       potBottomList: [] // 锅底牌
     }
   },

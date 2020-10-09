@@ -206,7 +206,7 @@ export default {
             );
             for (let i = 0; i < 13; i++) {
                 for (let j = 0; j < this.peopleList.length; j++) {
-                    let index = parseInt(this.randombetween(0, sendCardList.length - 1));
+                    let index = parseInt(this.randomBetween(0, sendCardList.length - 1));
                     this.peopleList[j].handCard.push(sendCardList[index]);
                     sendCardList.splice(index, 1);
                 }
@@ -222,7 +222,7 @@ export default {
             this.potBottom = sendCardList;
         },
         // 取随机数
-        randombetween(min, max) {
+        randomBetween(min, max) {
             return min + Math.random() * (max - min + 1);
         },
         // 选择一张牌
